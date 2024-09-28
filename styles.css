@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+.background {
+    background-image: url('https://i.imgur.com/MTxXCWp.jpeg'); /* Background image */
+    background-size: cover; 
+    background-position: center; 
+    filter: blur(5px); /* Apply blur effect to background */
+    position: fixed; /* Make it fixed to cover the entire screen */
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    z-index: 0; /* Place it behind other content */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    position: relative; 
+    z-index: 1; /* Place above the blurred background */
+    height: 100vh; /* Take full height of the viewport */
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ffffff; 
+    margin: 20px 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 1), 0 0 20px rgba(255, 255, 255, 1); /* Black outline with white glow */
+    transition: transform 0.3s, text-shadow 0.3s; /* Transition for glow effect */
+}
+
+.link-button {
+    display: inline-block;
+    background-color: rgba(30, 30, 30, 0.7); 
+    color: #ffffff;
+    padding: 15px 25px;
+    margin: 10px 0;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #ffffff; /* White outline */
+    transition: background-color 0.3s, transform 0.3s, border-color 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+}
+
+.link-button:hover {
+    background-color: rgba(58, 58, 58, 0.9); 
+    border-color: rgba(255, 255, 255, 1); /* White outline on hover */
+    transform: scale(1.1); /* Slightly enlarge button on hover */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5); /* White glow effect */
+}
+
+.link-button:focus, h1:focus {
+    outline: none; /* Remove default outline */
+}
